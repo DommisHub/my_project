@@ -9,7 +9,7 @@ ntmy
 echo "Type in an integer number to guess the number of files in this directory and then press ""enter"":"
 read response
 
-a=$(ls *.* | wc -l)
+a=$(find * -maxdepth 0 -type f | wc -l)
 
 while [[ $a -ne $response ]]
 do
